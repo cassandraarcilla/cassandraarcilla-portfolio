@@ -59,7 +59,7 @@ A multi-page personal portfolio showcasing projects, skills, certifications, and
 ## Project Structure
 
 ```
-cassandraarcilla-portfolio/
+cassandra-improved/
 ├── assets/
 │   ├── shared.css          # Global styles, CSS variables, dark/light theme, navbar, footer, modal
 │   └── shared.js           # Site-wide JS: theme toggle, scroll effects, modal, mobile drawer, toast
