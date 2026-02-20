@@ -1,0 +1,98 @@
+/* ===== RESUME ===== */
+.resume-section-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.resume-section-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  color: var(--white);
+  white-space: nowrap;
+  margin: 0;
+}
+.resume-line { flex: 1; height: 1px; background: var(--border-dim); }
+
+.resume-item {
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+  background: var(--black-2);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  position: relative;
+}
+.resume-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--maroon), var(--maroon-deep));
+  border-radius: 3px 0 0 3px;
+}
+.resume-item-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--maroon-lite);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+.resume-item h3 { font-size: 0.96rem; color: var(--white); margin-bottom: 0.2rem; }
+.resume-item p { font-size: 0.85rem; color: var(--gray-mid); margin: 0; }
+
+/* Sidebar */
+.resume-sidebar-inner { position: sticky; top: 100px; }
+.about-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--maroon-lite);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.about-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.about-contacts span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--gray-mid);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.about-contacts span em { color: var(--cream); font-style: normal; }
+
+.resume-obj {
+  background: var(--black-2);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.resume-obj h3 {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--maroon-lite);
+  margin-bottom: 0.75rem;
+}
+
+.resume-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem;
+  background: var(--maroon);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.resume-download:hover { background: var(--maroon-mid); transform: translateY(-2px); }

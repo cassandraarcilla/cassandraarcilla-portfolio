@@ -1,0 +1,113 @@
+/* ===== PROJECTS ===== */
+.projects-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.projects-header p { color: var(--gray-mid); font-size: 0.96rem; margin-bottom: 3rem; }
+
+.project-card {
+  background: var(--black-2);
+  border: 1px solid var(--border-dim);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  border-color: var(--border);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(123,20,34,0.12);
+}
+.project-img {
+  height: 200px;
+  background: linear-gradient(135deg, var(--black-3) 0%, var(--maroon-deep) 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.project-img-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+}
+.project-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--maroon-glow);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.2rem 0.65rem;
+  color: var(--maroon-lite);
+}
+.project-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.85rem;
+}
+.project-tech span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--maroon-glow);
+  background: var(--maroon-glow);
+  color: var(--maroon-lite);
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.project-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.project-body p {
+  font-size: 0.85rem;
+  color: var(--gray-mid);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+.project-actions { display: flex; gap: 0.75rem; margin-top: auto; }
+
+/* ===== CARD INTERACTIVITY ===== */
+.project-card[data-project] { cursor: pointer; }
+
+.project-card-hover-hint {
+  position: absolute;
+  bottom: 14px; right: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.0);
+  background: rgba(123,20,34,0.0);
+  border: 1px solid rgba(123,20,34,0.0);
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  pointer-events: none;
+}
+.project-card:hover .project-card-hover-hint {
+  color: var(--maroon-lite);
+  background: var(--maroon-glow);
+  border-color: var(--border);
+}
