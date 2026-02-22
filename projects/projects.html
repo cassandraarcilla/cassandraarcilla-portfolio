@@ -25,11 +25,11 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-lg-4">
-          <li class="nav-item"><a class="nav-link"        href="../home/home.html"          data-page="home">Home</a></li>
-          <li class="nav-item"><a class="nav-link"        href="../about/about.html"         data-page="about">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="../projects/projects.html"   data-page="projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link"        href="../resume/resume.html"       data-page="resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link"        href="../contact/contact.html"     data-page="contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link"        href="../home/home.html"         data-page="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link"        href="../about/about.html"        data-page="about">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="../projects/projects.html"  data-page="projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link"        href="../resume/resume.html"      data-page="resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link"        href="../contact/contact.html"    data-page="contact">Contact</a></li>
           <li class="nav-item d-flex align-items-center ms-lg-3">
             <button class="theme-toggle-pill" id="themeToggle" aria-label="Toggle theme">
               <span class="toggle-track">
@@ -59,13 +59,51 @@
 
       <div class="row g-4 pb-5">
 
-        <!-- Project 1: Barangay System -->
+        <!-- ── Project 1: Barangay System ── -->
         <div class="col-lg-4 col-md-6">
           <div class="project-card h-100 reveal" role="button" tabindex="0" data-project="barangay" aria-label="View Barangay System details">
-            <div class="project-img" style="background:linear-gradient(135deg,#0d1a2e,#1a3a5c);">
-              <span class="project-img-label">Barangay System</span>
-              <span class="project-badge">Group Project</span>
-              <div class="project-card-hover-hint">Click for details →</div>
+            <div class="card-gallery-wrap">
+              <div class="card-gallery-main" style="background:linear-gradient(135deg,#0d1a2e,#1a3a5c);">
+                <div class="card-main-bg" style="background:linear-gradient(135deg,#0d1a2e,#1a3a5c);"></div>
+                <img class="card-main-img" src="images/barangay-information-system/landing-page.jpg" alt="Landing Page" loading="lazy" onerror="this.style.display='none'">
+                <span class="card-main-label">Landing Page</span>
+                <span class="project-badge">Group Project</span>
+                <div class="project-card-hover-hint">Click for details →</div>
+              </div>
+              <div class="card-gallery-thumbs">
+                <button class="card-thumb" data-slide="1" aria-label="Log in Portal">
+                  <img src="images/barangay-information-system/log-in.jpg" alt="Log in Portal" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Log in</span>
+                </button>
+                <button class="card-thumb" data-slide="2" aria-label="Sign up">
+                  <img src="images/barangay-information-system/sign-up.jpg" alt="Sign up" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Sign up</span>
+                </button>
+                <button class="card-thumb" data-slide="3" aria-label="Home Dashboard">
+                  <img src="images/barangay-information-system/home-dashboard.jpg" alt="Home Dashboard" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Dashboard</span>
+                </button>
+                <button class="card-thumb" data-slide="4" aria-label="About Page">
+                  <img src="images/barangay-information-system/about.jpg" alt="About Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">About</span>
+                </button>
+                <button class="card-thumb" data-slide="5" aria-label="Service Page">
+                  <img src="images/barangay-information-system/service.jpg" alt="Service Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Services</span>
+                </button>
+                <button class="card-thumb" data-slide="6" aria-label="Announcement">
+                  <img src="images/barangay-information-system/announcement.jpg" alt="Announcement" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Announcement</span>
+                </button>
+                <button class="card-thumb" data-slide="7" aria-label="Contact Page">
+                  <img src="images/barangay-information-system/contact.jpg" alt="Contact Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Contact</span>
+                </button>
+                <button class="card-thumb" data-slide="8" aria-label="My Account">
+                  <img src="images/barangay-information-system/my-account.jpg" alt="My Account" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">My Account</span>
+                </button>
+              </div>
             </div>
             <div class="project-body">
               <div class="project-tech"><span>Vue 3</span><span>Vite</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
@@ -73,7 +111,7 @@
               <p>A web application for managing barangay services and resident information. Allows residents to register, log in, and access barangay services online.</p>
               <div class="project-actions">
                 <button class="btn-sm btn-sm-primary" onclick="event.stopPropagation(); openProjectModal(window.projectsData.barangay)">View Details</button>
-                <a href="https://github.com/cassandra-arcilla" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                <a href="https://github.com/cassandraarcilla/6WCSERVER-Final-Project.git" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
                   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;vertical-align:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   Code
                 </a>
@@ -82,21 +120,47 @@
           </div>
         </div>
 
-        <!-- Project 2: Garage Cafe -->
+        <!-- ── Project 2: Garage Cafe ── -->
         <div class="col-lg-4 col-md-6">
           <div class="project-card h-100 reveal" role="button" tabindex="0" data-project="garage" aria-label="View Garage Cafe details">
-            <div class="project-img" style="background:linear-gradient(135deg,#2d1a0a,#5c3010);">
-              <span class="project-img-label">Garage Cafe Mockup</span>
-              <span class="project-badge">Group Project</span>
-              <div class="project-card-hover-hint">Click for details →</div>
+            <div class="card-gallery-wrap">
+              <div class="card-gallery-main" style="background:linear-gradient(135deg,#2d1a0a,#5c3010);">
+                <div class="card-main-bg" style="background:linear-gradient(135deg,#2d1a0a,#5c3010);"></div>
+                <img class="card-main-img" src="images/garage-cafe/home.jpg" alt="Home Page" loading="lazy" onerror="this.style.display='none'">
+                <span class="card-main-label">Landing Page</span>
+                <span class="project-badge">Group Project</span>
+                <div class="project-card-hover-hint">Click for details →</div>
+              </div>
+              <div class="card-gallery-thumbs">
+                <button class="card-thumb" data-slide="1" aria-label="Menu">
+                  <img src="images/garage-cafe/menu.jpg" alt="Menu" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Menu</span>
+                </button>
+                <button class="card-thumb" data-slide="2" aria-label="About">
+                  <img src="images/garage-cafe/about.jpg" alt="About" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">About</span>
+                </button>
+                <button class="card-thumb" data-slide="3" aria-label="Blog">
+                  <img src="images/garage-cafe/blog.jpg" alt="Blog" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Blog</span>
+                </button>
+                <button class="card-thumb" data-slide="4" aria-label="Contact">
+                  <img src="images/garage-cafe/contact.jpg" alt="Contact" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Contact</span>
+                </button>
+              </div>
             </div>
             <div class="project-body">
-              <div class="project-tech"><span>Figma</span></div>
-              <h3>Garage Cafe Mockup</h3>
-              <p>Garage Café is a community-driven coffee shop in Mabalacat City, Pampanga, offering quality coffee, refreshing drinks, and light snacks in a cozy, industrial-inspired space.</p>
+              <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+              <h3>Garage Cafe</h3>
+              <p>A community-driven coffee shop website for Garage Café in Mabalacat City, Pampanga, featuring an industrial-inspired aesthetic with menu, gallery, and contact sections.</p>
               <div class="project-actions">
                 <button class="btn-sm btn-sm-primary" onclick="event.stopPropagation(); openProjectModal(window.projectsData.garage)">View Details</button>
-                <a href="https://www.figma.com/proto/placeholder" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                <a href="https://github.com/cassandraarcilla/Garage_Cafe_Code.git" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;vertical-align:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a href="https://www.visitgaragecafe.com/" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
                   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:-1px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                   View Live
                 </a>
@@ -105,19 +169,105 @@
           </div>
         </div>
 
-        <!-- Project 3: Daily Cup -->
+        <!-- ── Project 3: Daily Cup ── -->
         <div class="col-lg-4 col-md-6">
           <div class="project-card h-100 reveal" role="button" tabindex="0" data-project="dailycup" aria-label="View Daily Cup details">
-            <div class="project-img" style="background:linear-gradient(135deg,#1a0d00,#3d2000);">
-              <span class="project-img-label">Daily Cup Cafe</span>
-              <div class="project-card-hover-hint">Click for details →</div>
+            <div class="card-gallery-wrap">
+              <div class="card-gallery-main" style="background:linear-gradient(135deg,#1a0d00,#3d2000);">
+                <div class="card-main-bg" style="background:linear-gradient(135deg,#1a0d00,#3d2000);"></div>
+                <img class="card-main-img" src="images/daily-cup/landing-page.jpg" alt="Landing Page" loading="lazy" onerror="this.style.display='none'">
+                <span class="card-main-label">Landing Page</span>
+                <div class="project-card-hover-hint">Click for details →</div>
+              </div>
+              <div class="card-gallery-thumbs">
+                <button class="card-thumb" data-slide="1" aria-label="Log in Page">
+                  <img src="images/daily-cup/log in.jpg" alt="Log in Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Log in</span>
+                </button>
+                <button class="card-thumb" data-slide="2" aria-label="Sign Up Page">
+                  <img src="images/daily-cup/sign-up.jpg" alt="Sign Up Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Sign Up</span>
+                </button>
+                <button class="card-thumb" data-slide="3" aria-label="Features Page">
+                  <img src="images/daily-cup/features.jpg" alt="Features Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Features</span>
+                </button>
+                <button class="card-thumb" data-slide="4" aria-label="Products Page">
+                  <img src="images/daily-cup/products.jpg" alt="Products Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Products</span>
+                </button>
+                <button class="card-thumb" data-slide="5" aria-label="Cart Page">
+                  <img src="images/daily-cup/cart.jpg" alt="Cart Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Cart</span>
+                </button>
+                <button class="card-thumb" data-slide="6" aria-label="Contact">
+                  <img src="images/daily-cup/contact-us.jpg" alt="Contact" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Contact</span>
+                </button>
+              </div>
             </div>
             <div class="project-body">
-              <div class="project-tech"><span>HTML</span><span>CSS</span></div>
+              <div class="project-tech"><span>HTML5</span><span>CSS3</span></div>
               <h3>Daily Cup</h3>
-              <p>Daily Cup is your local evening haven — a cozy cafe in EPZA, Pulung Cacutud, Angeles City. Whether you're looking to sip freshly brewed coffee, enjoy light meals, or simply chill with friends.</p>
+              <p>Daily Cup is your local evening haven — a cozy cafe in EPZA, Pulung Cacutud, Angeles City. Whether you're looking to sip freshly brewed coffee or simply chill with friends.</p>
               <div class="project-actions">
                 <button class="btn-sm btn-sm-primary" onclick="event.stopPropagation(); openProjectModal(window.projectsData.dailycup)">View Details</button>
+                <a href="https://github.com/cassandraarcilla/DAILY_CUP" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;vertical-align:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+                <a href="https://cassandraarcilla.github.io/DAILY_CUP/" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:-1px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  View Live
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 4: Cinema Ticket Management System ── -->
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card h-100 reveal" role="button" tabindex="0" data-project="cinema" aria-label="View Cinema Ticket Management System details">
+            <div class="card-gallery-wrap">
+              <div class="card-gallery-main" style="background:linear-gradient(135deg,#1a0a1e,#3d1050);">
+                <div class="card-main-bg" style="background:linear-gradient(135deg,#1a0a1e,#3d1050);"></div>
+                <img class="card-main-img" src="images/cinema-ticket/landing-page.jpg" alt="Landing Page" loading="lazy" onerror="this.style.display='none'">
+                <span class="card-main-label">Landing Page</span>
+                <div class="project-card-hover-hint">Click for details →</div>
+              </div>
+              <div class="card-gallery-thumbs">
+                <button class="card-thumb" data-slide="1" aria-label="Log In">
+                  <img src="images/cinema-ticket/log in.jpg" alt="Log In" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Log In</span>
+                </button>
+                <button class="card-thumb" data-slide="2" aria-label="Sign Up">
+                  <img src="images/cinema-ticket/sign-up.jpg" alt="Sign Up" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Sign Up</span>
+                </button>
+                <button class="card-thumb" data-slide="3" aria-label="Features">
+                  <img src="images/cinema-ticket/features.jpg" alt="Features" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Features</span>
+                </button>
+                <button class="card-thumb" data-slide="4" aria-label="Products">
+                  <img src="images/cinema-ticket/products.jpg" alt="Products" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Products</span>
+                </button>
+                <button class="card-thumb" data-slide="5" aria-label="Cart">
+                  <img src="images/cinema-ticket/cart.jpg" alt="Cart" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Cart</span>
+                </button>
+                <button class="card-thumb" data-slide="6" aria-label="Contact Us">
+                  <img src="images/cinema-ticket/contact-us.jpg" alt="Contact Us" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Contact Us</span>
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tech"><span>PHP</span><span>MySQL</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+              <h3>Cinema Ticket Management System</h3>
+              <p>A web-based cinema ticket management system that allows users to browse movies, select seats, and book tickets online with an intuitive and responsive interface.</p>
+              <div class="project-actions">
+                <button class="btn-sm btn-sm-primary" onclick="event.stopPropagation(); openProjectModal(window.projectsData.cinema)">View Details</button>
                 <a href="https://github.com/cassandra-arcilla" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
                   <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;vertical-align:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                   Code
@@ -127,11 +277,99 @@
           </div>
         </div>
 
-      </div>
+        <!-- ── Project 5: Basic Student Record Management ── -->
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card h-100 reveal" role="button" tabindex="0" data-project="studentrecord" aria-label="View Student Record Management details">
+            <div class="card-gallery-wrap">
+              <div class="card-gallery-main" style="background:linear-gradient(135deg,#0a1a0a,#1a4020);">
+                <div class="card-main-bg" style="background:linear-gradient(135deg,#0a1a0a,#1a4020);"></div>
+                <img class="card-main-img" src="images/student-record/dashboard.jpg" alt="Dashboard" loading="lazy" onerror="this.style.display='none'">
+                <span class="card-main-label">Dashboard</span>
+                <div class="project-card-hover-hint">Click for details →</div>
+              </div>
+              <div class="card-gallery-thumbs">
+                <button class="card-thumb" data-slide="1" aria-label="Student List">
+                  <img src="images/student-record/student-list.jpg" alt="Student List" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Student List</span>
+                </button>
+                <button class="card-thumb" data-slide="2" aria-label="Add Student">
+                  <img src="images/student-record/add-student.jpg" alt="Add Student" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Add Student</span>
+                </button>
+                <button class="card-thumb" data-slide="3" aria-label="Records">
+                  <img src="images/student-record/records.jpg" alt="Records" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Records</span>
+                </button>
+                <button class="card-thumb" data-slide="4" aria-label="Search">
+                  <img src="images/student-record/search.jpg" alt="Search" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Search</span>
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tech"><span>Java</span><span>MySQL</span><span>JDBC</span><span>Swing</span></div>
+              <h3>Basic Student Record Management</h3>
+              <p>A Java-based desktop application for managing student records — add, update, delete, and search student data with a clean and functional interface connected to a MySQL database.</p>
+              <div class="project-actions">
+                <button class="btn-sm btn-sm-primary" onclick="event.stopPropagation(); openProjectModal(window.projectsData.studentrecord)">View Details</button>
+                <a href="https://github.com/cassandraarcilla/Basic-Student-Record-Management.git" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="margin-right:4px;vertical-align:-1px"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Project 6: EngeneHub WordPress ── -->
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card h-100 reveal" role="button" tabindex="0" data-project="engenehub" aria-label="View EngeneHub WordPress Site details">
+            <div class="card-gallery-wrap">
+              <div class="card-gallery-main" style="background:linear-gradient(135deg,#0a0a1e,#1a1a4a);">
+                <div class="card-main-bg" style="background:linear-gradient(135deg,#0a0a1e,#1a1a4a);"></div>
+                <img class="card-main-img" src="images/engenehub/home.jpg" alt="Home Page" loading="lazy" onerror="this.style.display='none'">
+                <span class="card-main-label">Home Page</span>
+                <div class="project-card-hover-hint">Click for details →</div>
+              </div>
+              <div class="card-gallery-thumbs">
+                <button class="card-thumb" data-slide="1" aria-label="About Page">
+                  <img src="images/engenehub/about.jpg" alt="About Page" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">About</span>
+                </button>
+                <button class="card-thumb" data-slide="2" aria-label="Blog Posts">
+                  <img src="images/engenehub/blog.jpg" alt="Blog Posts" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Blog</span>
+                </button>
+                <button class="card-thumb" data-slide="3" aria-label="Gallery">
+                  <img src="images/engenehub/gallery.jpg" alt="Gallery" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Gallery</span>
+                </button>
+                <button class="card-thumb" data-slide="4" aria-label="Contact">
+                  <img src="images/engenehub/contact.jpg" alt="Contact" loading="lazy" onerror="this.parentElement.style.display='none'">
+                  <span class="card-thumb-label">Contact</span>
+                </button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tech"><span>WordPress</span><span>CSS3</span><span>Elementor</span></div>
+              <h3>EngeneHub WordPress Site</h3>
+              <p>A fully designed and published WordPress website for EngeneHub — featuring a modern layout, blog, gallery, and contact sections built and customized using WordPress tools.</p>
+              <div class="project-actions">
+                <button class="btn-sm btn-sm-primary" onclick="event.stopPropagation(); openProjectModal(window.projectsData.engenehub)">View Details</button>
+                <a href="https://engenehub.wordpress.com/home/" target="_blank" rel="noopener" class="btn-sm btn-sm-ghost" onclick="event.stopPropagation()">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;vertical-align:-1px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  View Live
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
 
       <div class="projects-cta text-center pb-5">
         <p class="font-mono mb-3" style="color:var(--gray-mid); font-size:0.85rem; letter-spacing:0.05em;">// Want to see more?</p>
-        <a href="https://github.com/cassandra-arcilla" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
+        <a href="https://github.com/cassandraarcilla" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           Visit My GitHub
         </a>
@@ -182,6 +420,7 @@
       </div>
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/shared.js"></script>
   <script src="projects.js"></script>
