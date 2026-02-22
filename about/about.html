@@ -68,12 +68,12 @@
           <div class="col-lg-8 col-md-7 about-info">
             <div class="section-eyebrow">About Me</div>
             <h1>Cassandra Aubrey R. Arcilla</h1>
-            <p class="about-role">UI/UX Designer · Frontend Developer</p>
+            <p class="about-role">Aspiring Front-End Web Developer · UI/UX Designer</p>
             <p class="about-bio">
-              A versatile Web Developer specializing in UI/UX design and modern frontend development, with supporting skills in backend technologies. I create intuitive, user-centered interfaces that blend clean aesthetics with seamless functionality, leveraging UX principles to enhance usability and engagement — improving user interaction by up to <strong style="color:var(--maroon-lite)">75%</strong>.
+              An aspiring Front-End Web Developer and UI/UX Designer passionate about crafting intuitive, user-centered interfaces that blend clean aesthetics with seamless functionality. I leverage UX principles to enhance usability and engagement — improving user interaction by up to <strong style="color:var(--maroon-lite)">75%</strong>.
             </p>
             <p class="about-bio">
-              On the technical side, I excel in building responsive, high-performance frontend applications using contemporary JavaScript frameworks, while also implementing reliable backend features such as APIs, data handling, and server-side logic.
+              I excel in building responsive, high-performance frontend applications using modern JavaScript frameworks and translating Figma designs into pixel-perfect, accessible web experiences. I have foundational knowledge in backend technologies to support seamless collaboration across the full development cycle.
             </p>
             <div class="about-contacts">
               <span>
@@ -218,128 +218,233 @@
     <div class="section-eyebrow">Credentials</div>
     <h2 class="section-title mb-4">Certifications</h2>
 
+    <!-- Filter Tabs -->
+    <div class="cert-filter-wrap mb-4">
+      <button class="cert-filter-btn active" data-filter="all">All</button>
+      <button class="cert-filter-btn" data-filter="freecodecamp">freeCodeCamp</button>
+      <button class="cert-filter-btn" data-filter="cisco">Cisco</button>
+      <button class="cert-filter-btn" data-filter="simplilearn">Simplilearn</button>
+      <button class="cert-filter-btn" data-filter="hubspot">HubSpot</button>
+    </div>
+
     <div class="row g-3" id="certsGrid">
-      <!-- Certification Card 1 -->
-      <div class="col-md-4 col-sm-6 cert-item">
+
+      <!-- ── freeCodeCamp ── -->
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="freecodecamp">
         <div class="cert-card reveal d-flex flex-column gap-2 p-3">
           <div class="d-flex align-items-start gap-3">
-            <div class="cert-icon">
-              <img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px; height:36px;">
-            </div>
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
             <div class="cert-info flex-grow-1">
               <h4 class="mb-1">Responsive Web Design Certification</h4>
               <p class="mb-2">freeCodeCamp · 2024</p>
             </div>
           </div>
-          <a href="https://www.freecodecamp.org/certification/cassandra-arcilla/responsive-web-design" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">
-            View Certificate
-          </a>
+          <a href="https://www.freecodecamp.org/certification/cassandraarcilla/responsive-web-design" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-6 cert-item">
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="freecodecamp">
         <div class="cert-card reveal d-flex flex-column gap-2 p-3">
           <div class="d-flex align-items-start gap-3">
-            <div class="cert-icon">
-              <img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px; height:36px;">
-            </div>
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
             <div class="cert-info flex-grow-1">
               <h4 class="mb-1">Legacy JavaScript Algorithms and Data Structures</h4>
               <p class="mb-2">freeCodeCamp · 2025</p>
             </div>
           </div>
-          <a href="https://www.freecodecamp.org/certification/cassandra-arcilla/javascript-algorithms-and-data-structures" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">
-            View Certificate
-          </a>
+          <a href="https://www.freecodecamp.org/certification/cassandraarcilla/javascript-algorithms-and-data-structures" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-6 cert-item">
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="freecodecamp">
         <div class="cert-card reveal d-flex flex-column gap-2 p-3">
           <div class="d-flex align-items-start gap-3">
-            <div class="cert-icon">
-              <img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px; height:36px;">
-            </div>
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
             <div class="cert-info flex-grow-1">
               <h4 class="mb-1">Back End Development and APIs</h4>
               <p class="mb-2">freeCodeCamp · 2025</p>
             </div>
           </div>
-          <a href="https://www.freecodecamp.org/certification/cassandra-arcilla/back-end-development-and-apis" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">
-            View Certificate
-          </a>
+          <a href="https://www.freecodecamp.org/certification/cassandraarcilla/back-end-development-and-apis" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
         </div>
       </div>
 
-      <!-- Hidden certs (shown after "View More") -->
-      <div class="col-md-4 col-sm-6 cert-item cert-hidden" style="display:none;">
+      <!-- ── Cisco ── -->
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="cisco">
         <div class="cert-card reveal d-flex flex-column gap-2 p-3">
           <div class="d-flex align-items-start gap-3">
-            <div class="cert-icon">
-              <img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px; height:36px;">
-            </div>
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
             <div class="cert-info flex-grow-1">
-              <h4 class="mb-1">Introduction to Graphic Design; Basics of UI/UX</h4>
-              <p class="mb-2">Simplilearn · 2025</p>
+              <h4 class="mb-1">Introduction to Networks</h4>
+              <p class="mb-2">Cisco · 2024</p>
             </div>
           </div>
-          <a href="https://www.simplilearn.com/skillup-certificate-landing?token=placeholder" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">
-            View Certificate
-          </a>
+          <a href="https://www.credly.com/badges/416add4b-d5d0-44a2-bfaa-327e2cc7608c" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-6 cert-item cert-hidden" style="display:none;">
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="cisco">
         <div class="cert-card reveal d-flex flex-column gap-2 p-3">
           <div class="d-flex align-items-start gap-3">
-            <div class="cert-icon">
-              <img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px; height:36px;">
-            </div>
-            <div class="cert-info flex-grow-1">
-              <h4 class="mb-1">Introduction to Figma</h4>
-              <p class="mb-2">Simplilearn · 2024</p>
-            </div>
-          </div>
-          <a href="https://www.simplilearn.com/skillup-certificate-landing?token=placeholder" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">
-            View Certificate
-          </a>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6 cert-item cert-hidden" style="display:none;">
-        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
-          <div class="d-flex align-items-start gap-3">
-            <div class="cert-icon">
-              <img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px; height:36px;">
-            </div>
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
             <div class="cert-info flex-grow-1">
               <h4 class="mb-1">JavaScript Essentials 1</h4>
               <p class="mb-2">Cisco · 2024</p>
             </div>
           </div>
-          <a href="https://www.netacad.com/certificates/placeholder" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">
-            View Certificate
-          </a>
+          <a href="https://www.credly.com/badges/1e433999-22ca-48f2-8ca5-8945b87b787e" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
         </div>
       </div>
-    </div>
 
-    <!-- View More / View Less -->
-    <div class="text-center mt-4">
-      <button id="viewMoreCerts" class="btn-secondary" onclick="toggleCerts(this)">
-        View More Certifications
-      </button>
-    </div>
+      <!-- ── Simplilearn ── -->
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="simplilearn">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">Introduction to Graphic Design: Basics of UI/UX</h4>
+              <p class="mb-2">Simplilearn · 2025</p>
+            </div>
+          </div>
+          <a href="https://simpli-web.app.link/e/Sytn3QSqX0b" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="simplilearn">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">Website UI/UX Designing using ChatGPT</h4>
+              <p class="mb-2">Simplilearn · 2025</p>
+            </div>
+          </div>
+          <a href="https://simpli-web.app.link/e/3eHbpR6qX0b" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="simplilearn">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">Design Thinking for Beginners</h4>
+              <p class="mb-2">Simplilearn · 2025</p>
+            </div>
+          </div>
+          <a href=" https://simpli-web.app.link/e/xb58FtEDaVb" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+      <!-- ── HubSpot ── -->
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="hubspot">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">Digital Marketing</h4>
+              <p class="mb-2">HubSpot · 2025</p>
+            </div>
+          </div>
+          <a href="https://app-na2.hubspot.com/academy/achievements/ghrj0gys/en/1/cassandra-arcilla/digital-marketing" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="hubspot">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">Content Marketing</h4>
+              <p class="mb-2">HubSpot · 2025</p>
+            </div>
+          </div>
+          <a href="https://app-na2.hubspot.com/academy/achievements/f5djjhx8/en/1/cassandra-arcilla/content-marketing" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="hubspot">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">SEO</h4>
+              <p class="mb-2">HubSpot · 2026</p>
+            </div>
+          </div>
+          <a href="https://app-na2.hubspot.com/academy/achievements/9dpgzt3m/en/1/cassandra-arcilla/seo" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 cert-item" data-issuer="hubspot">
+        <div class="cert-card reveal d-flex flex-column gap-2 p-3">
+          <div class="d-flex align-items-start gap-3">
+            <div class="cert-icon"><img src="images/certification.png" alt="Certification Icon" class="img-fluid" style="width:36px;height:36px;"></div>
+            <div class="cert-info flex-grow-1">
+              <h4 class="mb-1">SEO 2</h4>
+              <p class="mb-2">HubSpot · 2026</p>
+            </div>
+          </div>
+          <a href="https://app-na2.hubspot.com/academy/achievements/r2476rn5/en/1/cassandra-arcilla/seo-ii" target="_blank" rel="noopener" class="btn-sm btn-sm-primary w-100 text-center" style="display:block;">View Certificate</a>
+        </div>
+      </div>
+
+    </div><!-- /certsGrid -->
   </div>
 </section>
 
-<script>
-function toggleCerts(btn) {
-  const hidden = document.querySelectorAll('.cert-hidden');
-  const isHidden = hidden[0].style.display === 'none';
-  hidden.forEach(el => el.style.display = isHidden ? '' : 'none');
-  btn.textContent = isHidden ? 'View Less' : 'View More Certifications';
+<style>
+.cert-filter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
+.cert-filter-btn {
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--border-dim, #d0d0d0);
+  background: transparent;
+  color: var(--text-main, #333);
+  font-size: 0.85rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.cert-filter-btn:hover {
+  border-color: var(--maroon-lite, #8b1a1a);
+  color: var(--maroon-lite, #8b1a1a);
+}
+.cert-filter-btn.active {
+  background: var(--maroon-lite, #8b1a1a);
+  border-color: var(--maroon-lite, #8b1a1a);
+  color: #fff;
+}
+.cert-item.hidden-by-filter {
+  display: none !important;
+}
+</style>
+
+<script>
+(function () {
+  const btns = document.querySelectorAll('.cert-filter-btn');
+  const items = document.querySelectorAll('.cert-item[data-issuer]');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      btns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.dataset.filter;
+      items.forEach(item => {
+        if (filter === 'all' || item.dataset.issuer === filter) {
+          item.classList.remove('hidden-by-filter');
+        } else {
+          item.classList.add('hidden-by-filter');
+        }
+      });
+    });
+  });
+})();
 </script>
 
   </div>
@@ -350,7 +455,7 @@ function toggleCerts(btn) {
       <div class="row g-4">
         <div class="col-lg-3 col-md-6">
           <span class="footer-logo"><span>&lt;</span>CassandraArcilla<span>/&gt;</span></span>
-          <p class="footer-desc">Web Developer specializing in UI/UX and full-stack solutions.</p>
+          <p class="footer-desc">Aspiring Front-End Web Developer specializing in UI/UX Design and Frontend Development.</p>
         </div>
         <div class="col-lg-2 col-md-6">
           <h4 class="footer-heading">Quick Links</h4>
@@ -367,7 +472,7 @@ function toggleCerts(btn) {
           <ul class="footer-links">
             <li><a href="#">UI/UX Design</a></li>
             <li><a href="#">Frontend Development</a></li>
-            <li><a href="#">Backend Development</a></li>
+            <li><a href="#">Backend Support</a></li>
             <li><a href="#">Responsive Design</a></li>
           </ul>
         </div>
