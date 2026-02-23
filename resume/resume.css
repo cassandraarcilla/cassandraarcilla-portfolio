@@ -1,8 +1,13 @@
-/* ===== RESUME ===== */
+/* ================================================================
+   RESUME PAGE — Upgraded CSS
+   ================================================================ */
+
+/* ── Section heads ────────────────────────────────────────────── */
 .resume-section-head {
   display: flex;
   align-items: center;
   gap: 1rem;
+  position: relative;
 }
 .resume-section-head h2 {
   font-family: 'Playfair Display', serif;
@@ -11,23 +16,63 @@
   white-space: nowrap;
   margin: 0;
 }
-.resume-line { flex: 1; height: 1px; background: var(--border-dim); }
+.resume-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-dim), transparent);
+  position: relative;
+  overflow: hidden;
+}
+/* Animated shimmer along resume line when it appears */
+.resume-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, var(--maroon), transparent);
+  animation: lineShimmer 2.5s ease 0.5s forwards;
+}
+@keyframes lineShimmer {
+  from { left: -100%; opacity: 1; }
+  to   { left: 200%; opacity: 0; }
+}
 
+/* ── Resume items (timeline cards) ───────────────────────────── */
 .resume-item {
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   background: var(--black-2);
   border: 1px solid var(--border-dim);
-  border-radius: 8px;
+  border-radius: 10px;
   position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
 }
+/* Left accent bar */
 .resume-item::before {
   content: '';
   position: absolute;
-  left: 0; top: 0; bottom: 0;
+  left: 0; top: 0;
   width: 3px;
-  background: linear-gradient(to bottom, var(--maroon), var(--maroon-deep));
+  height: 0;
+  background: linear-gradient(to bottom, var(--maroon-lite), var(--maroon-deep));
   border-radius: 3px 0 0 3px;
+  transition: height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Subtle shimmer on hover */
+.resume-item::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.025), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+.resume-item:hover { border-color: var(--border); box-shadow: 0 8px 32px rgba(0,0,0,0.3); transform: translateX(4px); }
+.resume-item:hover::after { left: 130%; }
+.resume-item.visible::before { height: 100%; }
+
 .resume-item-period {
   font-family: 'DM Mono', monospace;
   font-size: 0.72rem;
@@ -36,11 +81,12 @@
   letter-spacing: 0.1em;
   margin-bottom: 0.3rem;
 }
-.resume-item h3 { font-size: 0.96rem; color: var(--white); margin-bottom: 0.2rem; }
-.resume-item p { font-size: 0.85rem; color: var(--gray-mid); margin: 0; }
+.resume-item h3 { font-size: 0.96rem; color: var(--white); margin-bottom: 0.2rem; font-weight: 600; }
+.resume-item p  { font-size: 0.85rem; color: var(--gray-mid); margin: 0; line-height: 1.65; }
 
-/* Sidebar */
+/* ── Sidebar ──────────────────────────────────────────────────── */
 .resume-sidebar-inner { position: sticky; top: 100px; }
+
 .about-role {
   font-family: 'DM Mono', monospace;
   font-size: 0.85rem;
@@ -60,15 +106,22 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.25s;
 }
+.about-contacts span:hover { background: var(--maroon-glow); }
 .about-contacts span em { color: var(--cream); font-style: normal; }
 
+/* ── Objective / sidebar panels ──────────────────────────────── */
 .resume-obj {
   background: var(--black-2);
   border: 1px solid var(--border-dim);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
+.resume-obj:hover { border-color: var(--border); box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
 .resume-obj h3 {
   font-family: 'DM Mono', monospace;
   font-size: 0.72rem;
@@ -78,6 +131,7 @@
   margin-bottom: 0.75rem;
 }
 
+/* ── Download button ──────────────────────────────────────────── */
 .resume-download {
   display: flex;
   align-items: center;
@@ -87,18 +141,28 @@
   background: var(--maroon);
   color: var(--white);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: 'DM Mono', monospace;
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: var(--transition);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
 }
-.resume-download:hover { background: var(--maroon-mid); transform: translateY(-2px); }
+.resume-download::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+.resume-download:hover { background: var(--maroon-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(123,20,34,0.4); }
+.resume-download:hover::after { transform: translateX(100%); }
 
-
-/* ===== CERTIFICATION CARDS ===== */
+/* ── Cert filter bar ──────────────────────────────────────────── */
 .cert-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -118,18 +182,10 @@
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.cert-filter-btn:hover {
-  border-color: var(--maroon-lite);
-  color: var(--maroon-lite);
-}
-.cert-filter-btn.active {
-  background: var(--maroon);
-  border-color: var(--maroon);
-  color: #fff;
-}
+.cert-filter-btn:hover { border-color: var(--maroon-lite); color: var(--maroon-lite); }
+.cert-filter-btn.active { background: var(--maroon); border-color: var(--maroon); color: #fff; }
 
-.cert-card-wrap[style*="none"] { display: none; }
-
+/* ── Cert cards ───────────────────────────────────────────────── */
 .cert-card {
   display: flex;
   align-items: center;
@@ -138,31 +194,28 @@
   border: 1px solid var(--border-dim);
   border-radius: 8px;
   padding: 0.8rem 1rem;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
-.cert-card:hover {
-  border-color: var(--border);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-}
+.cert-card:hover { border-color: var(--border); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); }
 
-/* Colored icon boxes */
 .cert-icon {
-  width: 36px;
-  height: 36px;
+  width: 36px; height: 36px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  transition: transform 0.3s;
 }
-.cert-icon.fcc   { background: rgba(6,182,212,0.12);   color: #06b6d4; }
-.cert-icon.cisco { background: rgba(78,143,247,0.12);  color: #4e8ff7; }
-.cert-icon.slim  { background: rgba(249,115,22,0.12);  color: #f97316; }
-.cert-icon.hub   { background: rgba(255,122,89,0.12);  color: #ff7a59; }
+.cert-card:hover .cert-icon { transform: scale(1.1) rotate(-4deg); }
+.cert-icon.fcc   { background: rgba(6,182,212,0.12);  color: #06b6d4; }
+.cert-icon.cisco { background: rgba(78,143,247,0.12); color: #4e8ff7; }
+.cert-icon.slim  { background: rgba(249,115,22,0.12); color: #f97316; }
+.cert-icon.hub   { background: rgba(255,122,89,0.12); color: #ff7a59; }
 
-/* Right side of card */
 .cert-body {
   flex: 1;
   display: flex;
@@ -194,11 +247,22 @@
   letter-spacing: 0.06em;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: color 0.2s;
+  transition: color 0.2s, transform 0.2s;
+  display: inline-block;
 }
-.cert-link:hover { color: var(--maroon-mid); text-decoration: underline; }
+.cert-link:hover { color: var(--maroon-mid); transform: translateX(3px); }
 
-/* Light mode */
-body.light .cert-card { background: #f5f0eb; border-color: #ddd5cc; }
-body.light .cert-card:hover { border-color: #bbb; }
-body.light .cert-info h4 { color: #1a1a1a; }
+/* ── Light mode ───────────────────────────────────────────────── */
+body.light .resume-section-head h2 { color: #1c1117; }
+body.light .resume-line { background: linear-gradient(90deg, rgba(123,20,34,0.2), transparent); }
+body.light .resume-item { background: #ffffff; border-color: rgba(123,20,34,0.12); box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+body.light .resume-item:hover { box-shadow: 0 8px 32px rgba(123,20,34,0.1); }
+body.light .resume-item h3 { color: #1c1117; }
+body.light .resume-item p  { color: #6b5868; }
+body.light .resume-obj { background: #ffffff; border-color: rgba(123,20,34,0.12); }
+body.light .about-contacts span:hover { background: rgba(123,20,34,0.06); }
+body.light .cert-card { background: #ffffff; border-color: rgba(123,20,34,0.12); }
+body.light .cert-card:hover { border-color: rgba(123,20,34,0.3); }
+body.light .cert-info h4 { color: #1c1117; }
+body.light .cert-info p  { color: var(--maroon); }
+body.light .cert-link    { color: var(--maroon); }

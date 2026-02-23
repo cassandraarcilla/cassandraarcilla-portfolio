@@ -254,3 +254,209 @@ window.openProjectModal = function (data) {
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 })();
+// ================================================================
+// ENHANCED ANIMATION ENGINE — runs on all pages
+// ================================================================
+
+(function() {
+
+  // ── 1. UNIFIED SCROLL REVEAL (all variants) ─────────────────
+  function initReveal() {
+    const selectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children';
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+
+        // Stagger siblings inside rows
+        const row = el.closest('.row, .skills-tabs, .cert-filter-wrap, .hero-stats');
+        if (row) {
+          const siblings = [...row.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')];
+          const idx = siblings.indexOf(el);
+          if (idx > 0) el.style.transitionDelay = (idx * 0.09) + 's';
+        }
+        el.classList.add('visible');
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(selectors).forEach(el => obs.observe(el));
+  }
+
+  // ── 2. RESUME ITEM BAR ANIMATION ────────────────────────────
+  function initResumeItems() {
+    const items = document.querySelectorAll('.resume-item');
+    if (!items.length) return;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.2 });
+    items.forEach(item => obs.observe(item));
+  }
+
+  // ── 3. SKILL TAG STAGGER (on tab switch too) ─────────────────
+  function animateSkillTags(container) {
+    const tags = container.querySelectorAll('.skill-tag');
+    tags.forEach((tag, i) => {
+      tag.style.opacity = '0';
+      tag.style.transform = 'translateY(10px)';
+      tag.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+      setTimeout(() => {
+        tag.style.opacity = '1';
+        tag.style.transform = 'translateY(0)';
+      }, i * 55);
+    });
+  }
+
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.querySelector(btn.dataset.bsTarget);
+      if (target) setTimeout(() => animateSkillTags(target), 80);
+    });
+  });
+
+  // Animate initial visible tab
+  const activeTab = document.querySelector('.tab-pane.active');
+  if (activeTab) setTimeout(() => animateSkillTags(activeTab), 400);
+
+  // ── 4. TYPING EFFECT ON SECTION EYEBROWS ────────────────────
+  function typeEyebrow(el) {
+    const original = el.textContent.trim();
+    el.textContent = '';
+    el.style.opacity = '1';
+    let i = 0;
+    const iv = setInterval(() => {
+      el.textContent += original[i++];
+      if (i >= original.length) clearInterval(iv);
+    }, 55);
+  }
+
+  const eyebrowObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        typeEyebrow(e.target);
+        eyebrowObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.8 });
+  document.querySelectorAll('.section-eyebrow').forEach(el => {
+    el.style.opacity = '0';
+    eyebrowObs.observe(el);
+  });
+
+  // ── 5. SMOOTH HOVER RIPPLE ON CARDS ─────────────────────────
+  function addRipple(el) {
+    el.style.position = 'relative';
+    el.style.overflow = 'hidden';
+    el.addEventListener('click', function(e) {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const ripple = document.createElement('span');
+      ripple.style.cssText = `
+        position:absolute; border-radius:50%;
+        width:4px; height:4px;
+        background:rgba(123,20,34,0.3);
+        left:${x}px; top:${y}px;
+        transform:translate(-50%,-50%) scale(0);
+        animation:rippleAnim 0.55s ease-out forwards;
+        pointer-events:none; z-index:10;
+      `;
+      el.appendChild(ripple);
+      setTimeout(() => ripple.remove(), 600);
+    });
+  }
+
+  // Inject ripple keyframes
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes rippleAnim {
+      to { transform: translate(-50%,-50%) scale(80); opacity: 0; }
+    }
+  `;
+  document.head.appendChild(style);
+
+  document.querySelectorAll('.project-card, .service-card, .cert-card, .soft-card, .skill-group, .resume-item, .contact-info-card, .faq-item').forEach(addRipple);
+
+  // ── 6. CONTACT FORM FIELD ANIMATIONS ─────────────────────────
+  (function() {
+    const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+    inputs.forEach(input => {
+      // Shake on error clear
+      input.addEventListener('input', () => {
+        input.classList.remove('field-error');
+      });
+
+      // Subtle scale on focus
+      input.addEventListener('focus', () => {
+        input.style.transition = 'border-color 0.3s, box-shadow 0.3s, transform 0.2s';
+        input.style.transform = 'scale(1.008)';
+      });
+      input.addEventListener('blur', () => {
+        input.style.transform = 'scale(1)';
+      });
+    });
+  })();
+
+  // ── 7. STAGGER-CHILDREN REVEAL ──────────────────────────────
+  const staggerObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        staggerObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.stagger-children').forEach(el => staggerObs.observe(el));
+
+  // ── 8. SECTION ACCENT LINES ─────────────────────────────────
+  document.querySelectorAll('.section-title').forEach(title => {
+    const line = document.createElement('div');
+    line.className = 'section-accent-line';
+    title.parentNode.insertBefore(line, title);
+  });
+
+  // ── 9. CERT CARD COUNTER BADGE ──────────────────────────────
+  // Animate cert filter count on page load
+  (function() {
+    const filterBtns = document.querySelectorAll('.cert-filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.cert-item, .cert-card-wrap').forEach(item => {
+          const issuer = item.dataset.issuer;
+          if (filter === 'all' || issuer === filter) {
+            item.classList.remove('hidden-by-filter');
+          } else {
+            item.classList.add('hidden-by-filter');
+          }
+        });
+      });
+    });
+  })();
+
+  // ── 10. SMOOTH SECTION TRANSITIONS ──────────────────────────
+  (function() {
+    const sections = document.querySelectorAll('section, .skills-section, .certs-section, .services-section');
+    const secObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          secObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.05 });
+    sections.forEach(s => {
+      s.style.opacity = '0';
+      s.style.transition = 'opacity 0.5s ease';
+      secObs.observe(s);
+    });
+  })();
+
+  // Run reveal after DOM paint
+  requestAnimationFrame(() => { initReveal(); initResumeItems(); });
+
+})();
