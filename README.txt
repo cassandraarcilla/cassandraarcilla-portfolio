@@ -1,147 +1,134 @@
-Here is your **complete, fully GitHub-optimized README.md** — polished, recruiter-ready, visually structured, and professional.
+<CassandraArcilla />
+Personal Portfolio Website
 
-You can copy this directly into your `README.md`.
+Cassandra Aubrey R. Arcilla
+Aspiring Front-End Web Developer and UI/UX Designer
+Angeles City, Philippines
 
----
+Overview
 
-# `<CassandraArcilla />`
+This is a multi-page personal portfolio website showcasing projects, certifications, skills, resume, and contact information.
 
-## Personal Portfolio Website
+The site features a dark maroon aesthetic with advanced animation systems, interactive UI components, a dark/light theme toggle, and an animated React-powered code card on the homepage.
 
-<p align="center">
-  <b>Aspiring Front-End Web Developer & UI/UX Designer</b><br/>
-  Angeles City, Philippines 🇵🇭
-</p>
+The project demonstrates:
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Active-7b1422?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Responsive-Yes-c42040?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Dark%2FLight-Mode-5c0f1a?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Animations-Advanced-7b1422?style=for-the-badge"/>
-</p>
+Strong front-end architecture
 
----
+Advanced CSS and JavaScript animations
 
-# Overview
+UI/UX design implementation
 
-This is a multi-page personal portfolio built to showcase:
+Responsive layout design
 
-* Featured Projects
-* Certifications
-* Technical Skills
-* Resume
-* Contact System
+Component-based thinking with React integration
 
-Designed with a modern **dark maroon aesthetic**, enhanced with advanced animation systems, interactive UI components, and a React-powered animated code card.
+Live Pages
+Page	Description
+home/home.html	Hero section with particle background and animated React code card
+about/about.html	Profile section with orbit animation and certification filter
+projects/projects.html	Project cards with modal gallery and external links
+resume/resume.html	Timeline-style resume layout
+contact/contact.html	Functional EmailJS contact form with FAQ
+Tech Stack
+Core Technologies
 
-This project demonstrates:
+HTML5
 
-* Strong front-end architecture
-* UI/UX execution
-* Animation system design
-* Clean component structuring
-* Responsive layout implementation
+CSS3
 
----
+Vanilla JavaScript (ES6+)
 
-# Live Pages
+Frameworks and Libraries
 
-| Page                     | Description                                                 |
-| ------------------------ | ----------------------------------------------------------- |
-| `home/home.html`         | Hero with particle background + animated React code card    |
-| `about/about.html`       | Profile section with orbit animation + certification filter |
-| `projects/projects.html` | Interactive project cards with modal gallery                |
-| `resume/resume.html`     | Timeline-style resume layout                                |
-| `contact/contact.html`   | Functional EmailJS contact form + FAQ                       |
+Bootstrap 5.3 (CDN)
 
----
+React 18 (Homepage component only)
 
-# Tech Stack
+Babel Standalone
 
-## Core Technologies
+EmailJS
 
-* **HTML5** — Semantic structure
-* **CSS3** — Custom styling, animations, theme system
-* **Vanilla JavaScript (ES6+)** — Animation engine, modal system, interactions
+Google Fonts
 
----
+Key Features
+Animation System
 
-## Frameworks & Libraries
+Particle background with mouse interaction
 
-* **Bootstrap 5.3** (CDN)
-* **React 18** (Homepage component only)
-* **Babel Standalone**
-* **EmailJS**
-* **Google Fonts**
+Custom animated cursor
 
----
+3D tilt service cards
 
-# Major Features
+Magnetic call-to-action buttons
 
-## Advanced Animation System
+Scroll reveal engine
 
-* Particle background with mouse interaction
-* Custom animated cursor (dot + lag ring)
-* 3D tilt service cards
-* Magnetic CTA buttons
-* Scroll reveal engine
-* Typewriter section headers
-* Floating badge cycle
-* Counter animations
-* Ripple click effects
-* Auto-insert animated section accent lines
+Typewriter section headers
 
----
+Floating badge cycle
 
-## Dark / Light Mode
+Counter animations
 
-* Toggle switch in navbar
-* Navbar remains dark in both modes
-* Theme preference saved in `localStorage`
-* Warm white light mode (`#fdfaf7`)
-* Fully responsive (desktop + mobile drawer)
+Ripple click effects
 
----
+Animated section accent lines
 
-## Animated React Code Card (Homepage)
+Dark and Light Mode
 
-* Character-by-character typing
-* Syntax highlighting
-* Line numbers
-* Glitch restart animation
-* Floating idle animation
-* Live typing status indicator
-* macOS-style window chrome
+Navbar toggle switch
 
----
+Theme preference stored in localStorage
 
-## Project Modal System
+Navbar remains dark in both modes
 
-* Full-screen modal on card click
-* Image gallery with thumbnail navigation
-* “View Live” & “View Code” buttons
-* ESC key support
-* Backdrop click to close
+Warm white light mode background (#fdfaf7)
 
----
+Fully responsive layout
 
-## Certification Filter System
+Animated React Code Card
+
+Character-by-character typing effect
+
+Syntax highlighting
+
+Line numbers
+
+Glitch loop animation
+
+Floating idle animation
+
+Typing status indicator
+
+macOS-style window header
+
+Project Modal System
+
+Full-screen modal display
+
+Image gallery with thumbnail navigation
+
+View Live and View Code buttons
+
+ESC key and backdrop close support
+
+Certification Filter System
 
 Available on About and Resume pages.
 
 Filter by issuer:
 
-* freeCodeCamp
-* Cisco
-* Simplilearn
-* HubSpot
+freeCodeCamp
 
-Each category is color-coded with custom icons.
+Cisco
 
----
+Simplilearn
 
-# Project Structure
+HubSpot
 
+Each category is color-coded for visual clarity.
+
+Project Structure
 cassandraarcilla-portfolio/
 │
 ├── assets/
@@ -174,68 +161,90 @@ cassandraarcilla-portfolio/
 │   └── cassandra-arcilla-resume.pdf
 │
 └── README.md
-```
+Contact Form Setup (EmailJS)
 
----
+Open contact/contact.js and replace the following:
 
-# Design System
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
 
-## Color Palette
+Required template variables:
 
-### Primary Brand
+{{from_name}}
 
-* `#7b1422` — Maroon
-* `#c42040` — Accent
-* `#5c0f1a` — Deep Maroon
+{{from_email}}
 
-### Dark Mode
+{{subject}}
 
-* `#0a0a0b`
-* `#111114`
-* `#1a1a1f`
+{{message}}
 
-### Light Mode
+Set the destination email to:
 
-* `#fdfaf7`
-* `#ffffff`
+arcillacassandra009@gmail.com
 
----
+If credentials are not configured, the form automatically falls back to the system mail client.
 
-## Typography
+Design System
+Color Palette
 
-* **Playfair Display** — Headings
-* **DM Mono** — Navigation, buttons, code
-* **Lato** — Body text
+Primary Brand:
 
----
+#7b1422 (Maroon)
 
-# Customization Checklist
+#c42040 (Accent)
 
-* [ ] Add EmailJS credentials
-* [ ] Replace project screenshots
-* [ ] Update GitHub and social links
-* [ ] Replace resume PDF
-* [ ] Replace logo across pages
+#5c0f1a (Deep Maroon)
 
----
+Dark Mode:
 
-# What This Project Demonstrates
+#0a0a0b
 
-✔ Advanced CSS animation systems
-✔ Clean JavaScript structuring
-✔ UI/UX design implementation
-✔ Interactive front-end development
-✔ Responsive layout design
-✔ Theme architecture
-✔ Component-based thinking (React integration)
+#111114
 
----
+#1a1a1f
 
-# Author
+Light Mode:
 
-**Cassandra Aubrey R. Arcilla**
-Aspiring Front-End Web Developer & UI/UX Designer
+#fdfaf7
+
+#ffffff
+
+Typography
+
+Playfair Display — Headings
+
+DM Mono — Navigation, buttons, code
+
+Lato — Body text
+
+Getting Started
+
+This is a static website. No build tools required.
+
+Option 1 — Python
+python -m http.server 8000
+Option 2 — Node
+npx serve .
+
+Then open:
+
+http://localhost:8000/home/home.html
+Customization Checklist
+
+Add EmailJS credentials
+
+Replace project screenshots
+
+Update GitHub and social links
+
+Replace resume PDF
+
+Replace logo across all pages
+
+Author
+
+Cassandra Aubrey R. Arcilla
+Aspiring Front-End Web Developer and UI/UX Designer
 Angeles City, Philippines
-[arcillacassandra009@gmail.com](mailto:arcillacassandra009@gmail.com)
-
----
+arcillacassandra009@gmail.com
