@@ -1,11 +1,17 @@
 /* ===== PROJECTS PAGE ===== */
 .projects-header h1 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(1.8rem, 3vw, 2.6rem); /* matches .section-title on all other pages */
   color: var(--white);
   margin-bottom: 0.5rem;
 }
-.projects-header p { color: var(--gray-mid); font-size: 0.96rem; margin-bottom: 3rem; }
+.projects-header p {
+  color: var(--gray-mid);
+  font-size: 0.96rem;  /* matches contact/about intro paragraphs */
+  line-height: 1.75;
+  margin-bottom: 3rem;
+  max-width: 540px;
+}
 
 /* ── Project Card ── */
 .project-card {
@@ -63,7 +69,7 @@
   position: relative;
   z-index: 3;
   font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
+  font-size: 0.68rem;          /* consistent with other label text site-wide */
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.9);
@@ -102,15 +108,9 @@
   display: block;
   transition: transform 0.25s ease;
 }
-.card-thumb:hover img {
-  transform: scale(1.08);
-}
-.card-thumb:hover {
-  opacity: 1;
-}
-.card-thumb:not(:hover) {
-  opacity: 0.65;
-}
+.card-thumb:hover img { transform: scale(1.08); }
+.card-thumb:hover { opacity: 1; }
+.card-thumb:not(:hover) { opacity: 0.65; }
 .card-thumb.active {
   opacity: 1;
   outline: 2px solid var(--maroon-lite);
@@ -118,8 +118,7 @@
 }
 .card-thumb-label {
   position: absolute;
-  bottom: 0;
-  left: 0; right: 0;
+  bottom: 0; left: 0; right: 0;
   font-family: 'DM Mono', monospace;
   font-size: 0.55rem;
   letter-spacing: 0.05em;
@@ -134,9 +133,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card-thumb:hover .card-thumb-label {
-  opacity: 1;
-}
+.card-thumb:hover .card-thumb-label { opacity: 1; }
 
 /* ── Overlay badges ── */
 .project-badge {
@@ -201,14 +198,15 @@
 }
 .project-body h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
+  font-size: 1.1rem;           /* matches service-card h3 on home page */
   color: var(--white);
   margin-bottom: 0.45rem;
+  line-height: 1.35;
 }
 .project-body p {
-  font-size: 0.84rem;
+  font-size: 0.88rem;          /* matches service-card p, soft-card p, contact p */
   color: var(--gray-mid);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 1.1rem;
   flex: 1;
 }
@@ -217,3 +215,35 @@
   gap: 0.65rem;
   margin-top: auto;
 }
+
+/* ── Light mode ── */
+body.light .projects-header h1 { color: #1c1117; }
+body.light .projects-header p  { color: #6b5868; }
+
+body.light .project-card {
+  background: #ffffff;
+  border-color: rgba(123,20,34,0.12);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+body.light .project-card:hover {
+  border-color: rgba(123,20,34,0.35);
+  box-shadow: 0 12px 40px rgba(123,20,34,0.1);
+}
+body.light .project-body h3 { color: #1c1117; }
+body.light .project-body p  { color: #6b5868; }
+
+body.light .project-tech span {
+  background: #f3ede8;
+  color: var(--maroon);
+  border-color: rgba(123,20,34,0.18);
+}
+body.light .project-badge {
+  background: rgba(123,20,34,0.08);
+  border-color: rgba(123,20,34,0.25);
+  color: var(--maroon);
+}
+body.light .card-gallery-thumbs {
+  background: #f3ede8;
+  border-left-color: rgba(123,20,34,0.1);
+}
+body.light .card-thumb:not(:hover) { opacity: 0.7; }

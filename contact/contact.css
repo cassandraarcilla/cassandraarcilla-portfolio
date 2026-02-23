@@ -142,3 +142,13 @@
 .faq-q[aria-expanded="true"] .faq-arrow { transform: rotate(180deg); }
 .faq-a { background: var(--black-3); }
 .faq-a p { padding: 1rem 1.5rem; font-size: 0.88rem; color: var(--gray-mid); line-height: 1.7; margin: 0; }
+
+/* Light mode */
+body.light .contact-form input,
+body.light .contact-form textarea {
+  background: #fff;
+  color: #1c1117;
+  border-color: rgba(123,20,34,0.2);
+}
+body.light .faq-q { background: #fff; }
+body.light .faq-a { background: #f8f3ef; }
