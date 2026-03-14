@@ -266,3 +266,95 @@ body.light .cert-card:hover { border-color: rgba(123,20,34,0.3); }
 body.light .cert-info h4 { color: #1c1117; }
 body.light .cert-info p  { color: var(--maroon); }
 body.light .cert-link    { color: var(--maroon); }
+/* ══════════════════════════════════════════════════════
+   RESUME — NEW ADDITIONS (AWS · Google · Seminars)
+══════════════════════════════════════════════════════ */
+
+/* Color dot indicators on filter buttons */
+.rfd-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1px;
+}
+.rfd-all    { background: var(--maroon-lite); }
+.rfd-fcc    { background: #06b6d4; }
+.rfd-cisco  { background: #4e8ff7; }
+.rfd-slim   { background: #f97316; }
+.rfd-hub    { background: #ff7a59; }
+.rfd-aws    { background: #ff9900; }
+.rfd-google { background: #4285f4; }
+.rfd-sem    { background: #a855f7; }
+
+/* New cert icon colours */
+.cert-icon.aws    { background: rgba(255,153,0,0.12);  color: #ff9900; }
+.cert-icon.google { background: rgba(66,133,244,0.12); color: #4285f4; }
+.cert-icon.sem    { background: rgba(168,85,247,0.12); color: #a855f7; }
+
+/* Light mode for new icons */
+body.light .cert-icon.aws    { background: rgba(255,153,0,0.1); }
+body.light .cert-icon.google { background: rgba(66,133,244,0.1); }
+body.light .cert-icon.sem    { background: rgba(168,85,247,0.1); }
+
+/* ── Credentials at a Glance mini-grid ── */
+.cert-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+.cert-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.65rem;
+  background: var(--black-3);
+  border: 1px solid var(--border-dim);
+  border-radius: 7px;
+  transition: border-color 0.25s, transform 0.2s;
+}
+.cert-summary-item:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+}
+.cert-summary-total {
+  grid-column: 1 / -1;
+  background: var(--maroon-glow);
+  border-color: rgba(123,20,34,0.25);
+}
+.cs-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1;
+  min-width: 1.6ch;
+}
+.cs-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+  line-height: 1.3;
+}
+
+/* Light mode cert-summary */
+body.light .cert-summary-item {
+  background: #f8f3ef;
+  border-color: rgba(123,20,34,0.1);
+}
+body.light .cert-summary-item:hover {
+  border-color: rgba(123,20,34,0.25);
+}
+body.light .cert-summary-total {
+  background: rgba(123,20,34,0.06);
+  border-color: rgba(123,20,34,0.18);
+}
+body.light .cs-label { color: #6b5868; }
+
+/* Make filter bar wrap neatly on smaller screens */
+@media (max-width: 576px) {
+  .cert-filter-bar { gap: 0.35rem; }
+  .cert-filter-btn { font-size: 0.58rem; padding: 0.28rem 0.7rem; }
+}

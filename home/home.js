@@ -8,7 +8,6 @@
   const phrases = [
     'UI/UX Designer',
     'Frontend Developer',
-    'Creative Thinker',
   ];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 

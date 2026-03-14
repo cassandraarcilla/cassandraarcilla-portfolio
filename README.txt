@@ -2,7 +2,7 @@
 Personal Portfolio Website
 
 Cassandra Aubrey R. Arcilla
-Aspiring Front-End Web Developer and UI/UX Designer
+   Frontend Web Developer and UI/UX Designer
 Angeles City, Philippines
 
 Overview
@@ -13,7 +13,7 @@ The site features a dark maroon aesthetic with advanced animation systems, inter
 
 The project demonstrates:
 
-Strong front-end architecture
+Strong  Frontend architecture
 
 Advanced CSS and JavaScript animations
 
@@ -245,6 +245,6 @@ Replace logo across all pages
 Author
 
 Cassandra Aubrey R. Arcilla
-Aspiring Front-End Web Developer and UI/UX Designer
+   Frontend Web Developer and UI/UX Designer
 Angeles City, Philippines
 arcillacassandra009@gmail.com
